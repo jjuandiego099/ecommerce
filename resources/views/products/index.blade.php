@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Listado de Productos</title>
+@extends('layouts.app')
+@section('css')
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,21 +8,7 @@
       background: #f2f2f2; /* Fondo yeso */
     }
 
-    /* 🔹 Topbar reutilizada */
-    .topbar {
-      width: 100%;
-      background: #007bff;
-      color: white;
-      padding: 15px 25px;
-      font-size: 18px;
-      font-weight: bold;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-      text-align: left;
-    }
+   
 
     .container {
       max-width: 1200px;
@@ -96,14 +77,8 @@
       background: #0056b3;
     }
   </style>
-</head>
-<body>
-  <!-- 🔹 Topbar -->
-  <div class="topbar">
-    Gestión de Productos
-  </div>
-
-  <!-- 🔹 Listado de productos -->
+@endsection
+@section('content')  
   <div class="container">
     <!-- Generamos 20 productos -->
     <!-- Puedes cambiar las imágenes por tus URLs -->
@@ -219,5 +194,20 @@
     <div class="card"><img src="https://picsum.photos/300?random=19"><div class="card-content"><h3>Producto 19</h3><p>Descripción breve.</p><div class="price">$108.00</div><a href="#" class="btn">Ver más</a></div></div>
     <div class="card"><img src="https://picsum.photos/300?random=20"><div class="card-content"><h3>Producto 20</h3><p>Descripción breve.</p><div class="price">$118.00</div><a href="#" class="btn">Ver más</a></div></div>
   </div>
+@endsection
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Listado de Productos</title>
+
+</head>
+<body>
+
+  
 </body>
 </html>

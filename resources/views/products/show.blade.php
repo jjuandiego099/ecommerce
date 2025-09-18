@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Detalle del Producto</title>
-  <style>
+@extends('layouts.app')
+@section('css')
+    <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -13,21 +8,7 @@
       background: #f2f2f2; /* Fondo yeso */
     }
 
-    /* 🔹 Topbar reutilizada */
-    .topbar {
-      width: 100%;
-      background: #007bff;
-      color: white;
-      padding: 15px 25px;
-      font-size: 18px;
-      font-weight: bold;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-      text-align: left;
-    }
+   
 
     /* 🔹 Layout principal */
     .container {
@@ -143,15 +124,9 @@
       background: #565e64;
     }
   </style>
-</head>
-<body>
-  <!-- 🔹 Topbar -->
-  <div class="topbar">
-    Gestión de Productos
-  </div>
-
-  <!-- 🔹 Contenido del producto -->
-  <div class="container">
+@endsection
+@section('content')
+    <div class="container">
     <div class="product-image">
       <img src="https://picsum.photos/600/600?random=31" alt="Producto destacado">
     </div>
@@ -179,5 +154,19 @@
       </div>
     </div>
   </div>
+@endsection
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Detalle del Producto</title>
+  
+</head>
+<body>
+
+  
 </body>
 </html>

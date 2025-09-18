@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Formulario Productos</title>
+@extends('layouts.app')
+@section('css')
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,23 +10,7 @@
       flex-direction: column;
     }
 
-    /* 🔹 Topbar */
-    .topbar {
-      width: 100%;
-      background: #007bff;
-      color: white;
-      padding: 20px 30px;
-      font-size: 20px;
-      font-weight: bold;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
-      text-align: left;
-    }
-
-    /* 🔹 Contenedor principal para centrar */
+  
     .container {
       flex: 1;
       display: flex;
@@ -135,16 +114,10 @@
       background: #0056b3;
       transform: scale(1.03);
     }
-  </style>
-</head>
-<body>
-  <!-- 🔹 Topbar -->
-  <div class="topbar">
-    Gestión de Productos
-  </div>
-
-  <!-- 🔹 Contenedor -->
-  <div class="container">
+  </style>  
+@endsection
+@section('content')
+     <div class="container">
     <form action="" method="post" enctype="multipart/form-data">
       <h2>Registrar Producto</h2>
 
@@ -174,5 +147,22 @@
       <button type="submit">Guardar Producto</button>
     </form>
   </div>
+@endsection
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formulario Productos</title>
+  
+</head>
+<body>
+
+  
+
+ 
 </body>
 </html>

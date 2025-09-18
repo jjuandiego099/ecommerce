@@ -13,6 +13,6 @@ class ProductController extends Controller
          return view('products.create');
     }
     function show($id,$category=null){
-         return view('products.create');
+         return view('products.show');
     }
 }

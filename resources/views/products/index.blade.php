@@ -1,85 +1,10 @@
 @extends('layouts.app')
 @section('css')
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding-top: 80px; /* espacio para la topbar */
-      background: #f2f2f2; /* Fondo yeso */
-    }
-
-   
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 28px rgba(0, 123, 255, 0.5);
-    }
-
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 1rem;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-      color: #333;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    .price {
-      font-size: 16px;
-      font-weight: bold;
-      color: #007bff;
-      margin-bottom: 10px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 8px 12px;
-      background: #007bff;
-      color: #fff;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #0056b3;
-    }
-  </style>
+ <link rel="stylesheet" href="{{asset('css/style2.css')}}">  
+  
 @endsection
 @section('content')  
-  <div class="container">
+  <div class="container1">
     <!-- Generamos 20 productos -->
     <!-- Puedes cambiar las imágenes por tus URLs -->
     <div class="card">
@@ -197,17 +122,4 @@
 @endsection
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Listado de Productos</title>
 
-</head>
-<body>
-
-  
-</body>
-</html>

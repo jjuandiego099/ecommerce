@@ -18,6 +18,6 @@ Route::prefix('products')->controller(ProductController::class)->group(function 
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'welcome'])->name('welcome');
 Route::get('/', [HomeController::class, 'welcome']);
 

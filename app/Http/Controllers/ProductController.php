@@ -8,10 +8,10 @@ class ProductController extends Controller
 {
     function index(){
         return view('products.index');
-    }
-    function create(){
+    }function create(){
          return view('products.create');
     }
+    
     function show($id,$category=null){
          return view('products.show');
     }

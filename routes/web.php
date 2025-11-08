@@ -13,9 +13,10 @@ Route::get('products/{id}/{category}', [ProductController::class, "show"]);
 
 Route::prefix('admin')->group(function () {
     Route::get('/', [AdminController::class, "index"])->name('adminIndex');
-    Route::get('/products/create', [ProductController::class, "create"]);
+    Route::get('/products/create', [ProductController::class, "create"])->name('productsCreate');
     Route::get('/category', [CategoryController::class, "create"])->name('categoryCreate');
     Route::post('/category/store', [CategoryController::class, "store"])->name('categoryStore');
+    Route::post('/product/store', [ProductController::class, "store"])->name('productStore');
 });
 
 Auth::routes();

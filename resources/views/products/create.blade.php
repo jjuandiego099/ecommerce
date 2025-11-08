@@ -1,38 +1,65 @@
-@extends('layouts.app')
-@section('css')
-  <link rel="stylesheet" href="{{asset('css/style.css')}}">  
-@endsection
+@extends('admin.layouts.app')
+
 @section('content')
+    <h2 class="mb-4">Registrar Producto</h2>
+    <div class="card">
+        <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data">
 
-     <div class="container1">
-    <form action="" method="post" enctype="multipart/form-data">
-      <h2>Registrar Producto</h2>
 
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name">
+                <form method="POST" enctype="multipart/form-data">
 
-      <label for="description">Description</label>
-      <textarea name="description" id="description"></textarea>
 
-      <label for="price">Price</label>
-      <input type="text" name="price" id="price">
+                    <!-- Nombre del Producto -->
+                    <div class="input-group input-group-outline mb-3">
+                        <label for="name" class="form-label">Nombre del Producto</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
 
-      <label for="image">Image</label>
-      <label for="image" class="file-label">📂 Seleccionar Imagen</label>
-      <input type="file" name="image" id="image">
+                    <!-- Descripción del Producto -->
+                    <div class="input-group input-group-outline mb-3">
+                        <label for="description" class="form-label">Descripción</label>
+                        <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                    </div>
 
-      <label for="brand">Brand</label>
-      <input type="text" name="brand" id="brand">
+                    <!-- Precio del Producto -->
+                    <div class="input-group input-group-outline mb-3">
+                        <label for="price" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="price" name="price" step="0.01"
+                            min="0" required>
+                    </div>
 
-      <label for="category">Categoría</label>
-      <select name="category" id="category">
-        <option value="tech">Tecnología</option>
-        <option value="fashion">Moda</option>
-        <option value="home">Hogar</option>
-      </select>
 
-      <button type="submit">Guardar Producto</button>
-    </form>
-  </div>
+                    <!-- Marca del Producto -->
+                    <div class="input-group input-group-outline mb-3">
+
+                        <select class="form-control" id="brandCategory">
+                            <option value="" selected disabled>-- Selecciona una marca --</option>
+                            @foreach ($brands as $item)
+                                <option value="{{$item->id}}" >{{ $item->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+
+                    <!-- Categoría del Producto -->
+                    <div class="input-group input-group-outline mb-3">
+
+                        <select class="form-control" id="productCategory">
+                            <option value="" selected disabled>-- Selecciona una categoría --</option>
+                            @foreach ($categories as $item)
+                                <option value="{{$item->id}}">{{ $item->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <!-- Botón de Envío -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">Guardar Producto</button>
+                    </div>
+                </form>
+
+            </form>
+        </div>
+    </div>
 @endsection
-

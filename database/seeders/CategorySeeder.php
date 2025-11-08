@@ -23,6 +23,6 @@ class CategorySeeder extends Seeder
         $mycategory3->name='Tv';
         $mycategory3->save();
 
-        Category::factory(10)->create();
+        Category::factory(20)->create();
     }
 }

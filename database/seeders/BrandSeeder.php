@@ -14,6 +14,6 @@ class BrandSeeder extends Seeder
     {   $mycategory1= new Brand();
         $mycategory1->name='apple';
         $mycategory1->save();
-        Brand::factory(10)->create();
+        Brand::factory(20)->create();
     }
 }

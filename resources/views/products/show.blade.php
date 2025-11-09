@@ -10,13 +10,11 @@
       <img src="https://picsum.photos/600/600?random=31" alt="Producto destacado">
     </div>
     <div class="product-details">
-      <h1>Producto Premium</h1>
+      <h1>{{$product->name }}</h1>
       <p class="description">
-        Este producto combina la mejor tecnología con un diseño elegante y moderno. 
-        Es ideal para quienes buscan estilo y funcionalidad, ofreciendo un rendimiento superior 
-        y materiales de la más alta calidad.
+        {{$product->description }}
       </p>
-      <div class="price">$250.00</div>
+      <div class="price">$ {{$product->price }}</div>
 
       <h3>Características principales:</h3>
       <ul class="features">
@@ -29,7 +27,7 @@
 
       <div class="actions">
         <a href="#" class="btn">Agregar al carrito</a>
-        <a href="#" class="btn btn-secondary">Volver al listado</a>
+        <a href={{route('productos')}} class="btn btn-secondary">Volver al listado</a>
       </div>
     </div>
   </div>

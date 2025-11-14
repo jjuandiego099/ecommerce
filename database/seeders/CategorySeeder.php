@@ -24,5 +24,8 @@ class CategorySeeder extends Seeder
         $mycategory3->save();
 
         Category::factory(20)->create();
+        $mycategory3= new Category();
+        $mycategory3->name='Todas';
+        $mycategory3->save();
     }
 }

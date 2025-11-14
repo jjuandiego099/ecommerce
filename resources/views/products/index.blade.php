@@ -12,7 +12,7 @@
  <div class="row category-container my-5 mx-2">
     @foreach ($categories as $cat)
       <div class="col-6 col-md-3 col-lg-2 mb-3">
-        <a href="{{$cat->id !=30 ? route('categoryShow', $cat->id):route('productos')}}" class="category-link">
+        <a href="{{$cat->id !=24 ? route('categoryShow', $cat->id):route('productos')}}" class="category-link">
           <div class="category-box text-center p-3 border rounded shadow-sm bg-white
             {{ isset($category) && $category->id == $cat->id ? 'border-primary shadow-lg' : '' }}">
             <h6 class="mb-0">{{ $cat->name }}</h6>
